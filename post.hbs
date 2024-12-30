@@ -10,28 +10,10 @@
 <header class="post-header {{#if feature_image}} has-cover {{/if}}">
 	<div class="inner">
 		<span class="post-info">
-			<span class="post-type">{{t "Article"}}</span>
-			{{#if tags}}
-			<span class="post-count">{{primary_tag.name}}</span>
-			{{/if}}
 		</span>
 		<h1 class="post-title">{{{title}}}</h1>
 		<div class="post-meta">
-			<div class="post-meta-avatars">
-				{{#foreach authors}}
-					{{#if profile_image}}
-						<figure class="post-meta-avatar">
-							<a href="{{url}}" class="author-avatar">
-								<img class="author-profile-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}" />
-							</a>
-						</figure>
-					{{else}}
-						<figure class="post-meta-avatar avatar"></figure>
-					{{/if}}
-				{{/foreach}}
-			</div>
-			<h4 class="post-meta-author">{{authors separator=", "}}</h4>
-			<time datetime="{{date format='DD-MM-YYYY'}}">{{date format="DD MMM YYYY"}}</time> &bull; {{reading_time minute=(t "1 min read") minutes=(t "% min read")}}
+			<time datetime="{{date format='D-MM-YYYY'}}">{{date format="D MMM YYYY"}}</time> &bull; {{reading_time minute=(t "1 min read") minutes=(t "% min read")}}
 		</div>
 		{{#if feature_image}}
 		<div class="post-cover cover">

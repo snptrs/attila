@@ -14,11 +14,8 @@
 			{{/if}}
 			<h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
 			<span class="post-meta">
-				{{t "By"}}
-				{{authors separator=", "}}
+					<time datetime="{{date format='D-MM-YYYY'}}">{{date format="D MMM YYYY"}}</time>
 				{{#primary_tag}}{{t "in"}} <a class="post-meta-tag" href="{{url}}">{{name}}</a>{{/primary_tag}}
-				{{t "on"}}
-				<time datetime="{{date format='DD-MM-YYYY'}}">{{date format="DD MMM YYYY"}}</time>
 			</span>
 			<p class="post-excerpt">{{excerpt}}&hellip;</p>
 		</div>
